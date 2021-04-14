@@ -18,3 +18,14 @@ jobs:
           # GitHub Status Check won't become failure with a warning.
           level: warning
           workdir: .
+
+  InputTest:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-java@v2
+        with:
+          distribution: 'adopt' # See 'Supported distributions' for available options
+          java-version: '11'
+          check-latest: true
+      - run: java -cp java Exercise09_09
