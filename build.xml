@@ -21,8 +21,8 @@
 
     <target name="run">
         <java jar="build/jar/TestInterest.jar" fork="true"/>
-            <arg value="10000"/>
-            <arg value="350"/>
+            <arg value="${arg0}"/>
+            <arg value="${arg1}"/>
     </target>
 
 </project>
