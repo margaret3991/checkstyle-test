@@ -19,13 +19,11 @@ jobs:
           level: warning
           workdir: .
 
-  InputTest:
+  run-me:
     runs-on: ubuntu-latest
+    name: Run in Script
     steps:
       - uses: actions/checkout@v2
-      - uses: actions/setup-java@v2
-        with:
-          distribution: 'adopt' # See 'Supported distributions' for available options
-          java-version: '11'
-          check-latest: true
-      - run: java -cp java Exercise09_09
+      - name: Just do it
+        run: ./test.sh
+
