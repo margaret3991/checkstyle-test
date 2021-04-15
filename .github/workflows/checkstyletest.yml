@@ -15,7 +15,7 @@ jobs:
           java-version: '11'
           distribution: 'adopt'
       - name: Build with Ant
-        run: ant -noinput -buildfile build.xml compile jar run
+        run: ant -buildfile build.xml compile jar -Darg0=10000 -Darg1=350 run 
 
   Checkstyle-Test:
     runs-on: ubuntu-latest
