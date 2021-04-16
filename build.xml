@@ -25,4 +25,10 @@
             <arg value="${args[1]}"/>
     </target>
 
+    <target name="test">
+        <echo message="The value of args[0] is ${args[0]}"/>
+    </target>
+
 </project>
+
+
